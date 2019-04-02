@@ -43,3 +43,4 @@ Akteri
 ★ Menadžer - zaposlenik koji upravlja radom aplikacije 
 ★ Dostavljač - zaposlenik koji dostavlja narudžbu na adresu 
 ★ Sistem za autorizaciju kartica 
+
