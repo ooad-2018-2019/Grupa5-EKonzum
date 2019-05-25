@@ -7,7 +7,7 @@ namespace EMarket.Models
 {
     public class PrehrambeniProizvod : Proizvod
     {
-        private String SastavProizvoda { get; set; }
+        public String SastavProizvoda { get; set; }
         public PrehrambeniProizvod () { }
         public PrehrambeniProizvod (String naziv, String proizvodjac, int kolicinaNaStanju, /*Bitmap slikaProizvoda, */ double cijena, bool naAkciji, double novaCijena, double kolicinaUPakovanju, String sastavProizvoda)
         {

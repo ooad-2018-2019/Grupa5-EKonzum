@@ -7,11 +7,11 @@ namespace EMarket.Models
 {
     abstract public class Osoba
     {
-        protected String Ime { get; set; }
-        protected String Prezime { get; set; }
-        protected String KorisnickoIme { get; set; }
-        protected String Lozinka { get; set; }
-        protected int Id { get; set; }
+        public String Ime { get; set; }
+        public String Prezime { get; set; }
+        public String KorisnickoIme { get; set; }
+        public String Lozinka { get; set; }
+        public int Id { get; set; }
         
         public Osoba () { }
         public Osoba (String ime, String prezime, String korisnickoIme, String lozinka, int id)

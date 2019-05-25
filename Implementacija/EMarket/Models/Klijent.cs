@@ -7,10 +7,10 @@ namespace EMarket.Models
 {
     public class Klijent : Osoba
     {
-        private String AdresaIsporuke { get; set; }
-        private String SigurnosnoPitanje { get; set; }
-        private String Odgovor { get; set; }
-        private int BrojBodova { get; set; }
+        public String AdresaIsporuke { get; set; }
+        public String SigurnosnoPitanje { get; set; }
+        public String Odgovor { get; set; }
+        public int BrojBodova { get; set; }
 
         public Klijent () { }
         public Klijent (String ime, String prezime, String korisnickoIme, String lozinka, int id, String adresaIsporuke, String sigurnosnoPitanje, String odgovor, int brojBodova)

@@ -5,16 +5,17 @@ using System.Threading.Tasks;
 
 namespace EMarket.Models
 {
-    public class Market
+    public class Market : IPlacanje
     {
-        private List<Proizvod> Proizvodi { get; set; }
-        private List<Proizvod> DostupniProizvodi { get; set; }
-        private List<Osoba> Osobe { get; set; }
+        public List<Proizvod> Proizvodi { get; set; }
+        public List<Proizvod> DostupniProizvodi { get; set; }
+        public List<Osoba> Osobe { get; set; }
+        public List<Narudzba> Narudzbe { get; set; }
 
         public Market () { }
         public Market(List<Proizvod> proizvodi, List<Proizvod> dostupniProizvodi, List<Osoba> osobe)
         {
-            Proizvodi = proizvodi;
+            Proizvodi = proizvodi;   
             DostupniProizvodi = dostupniProizvodi;
             Osobe = osobe;
         }
@@ -25,6 +26,16 @@ namespace EMarket.Models
         public void DodajProizvod (Proizvod p)
         {
             Proizvodi.Add(p);
+        }
+
+        public void ObracunajPopust(Narudzba narudzba)
+        {
+            
+        }
+
+        public void Plati(Narudzba narudzba)
+        {
+            // ispisati negdje narudzba.DajUkupnuCijenuNarudzbe();
         }
     }
 }

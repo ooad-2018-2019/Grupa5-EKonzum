@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace EMarket.Models
 {
-    public class Dostavljac : Osoba
+    public class Dostavljac : Osoba, IDostava
     {
         public Dostavljac () { }
         public Dostavljac (String ime, String prezime, String korisnickoIme, String lozinka, int id)
@@ -15,6 +15,18 @@ namespace EMarket.Models
             KorisnickoIme = korisnickoIme;
             Lozinka = lozinka;
             Id = id;
+        }
+
+        public void OznaciNarudzbuKaoPlacenu(int id)
+        {
+            foreach (Narudzba n in Market.Narudzbe) // popraviti
+            {
+                if (n.Id.Equals(id))
+                {
+                    n.Isporuceno = true;
+                    return;
+                }
+            }
         }
     }
 }
