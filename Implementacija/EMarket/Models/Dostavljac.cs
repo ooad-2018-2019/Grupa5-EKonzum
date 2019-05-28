@@ -17,9 +17,9 @@ namespace EMarket.Models
             Id = id;
         }
 
-        public void OznaciNarudzbuKaoPlacenu(int id)
+        public void OznaciNarudzbuKaoPlacenu(int id, Market market)
         {
-            foreach (Narudzba n in Market.Narudzbe) // popraviti
+            foreach (Narudzba n in market.Narudzbe) // popraviti
             {
                 if (n.Id.Equals(id))
                 {

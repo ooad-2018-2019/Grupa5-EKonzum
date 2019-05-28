@@ -15,15 +15,17 @@ namespace EMarket.Models
             KorisnickoIme = korisnickoIme;
             Lozinka = lozinka;
             Id = id;
+            
         }
 
-        public List<Proizvod> DajNajprodavanijeProizvode()
+        public List<Proizvod> DajNajprodavanijeProizvode(Market market)
         {
+            //treba da sortira u opadajucem sve proizvode u marketu prema atributu brojPutaKupljen
             List<Proizvod> najprodavaniji = new List<Proizvod>();
-            foreach (Proizvod p in Market.Proizvodi) // popraviti
-            {
+            //provjeriti je li ok ovo sortiranje
+            najprodavaniji.AddRange(market.Proizvodi);
+            najprodavaniji = najprodavaniji.OrderByDescending(Proizvod => Proizvod.BrojPutaKupljen).ToList();
 
-            }
             return najprodavaniji;
         }
 
@@ -36,10 +38,13 @@ namespace EMarket.Models
         {
             if (povecaj)
             {
-                p.NovaCijena += p.NovaCijena * postotak;
+                //p.NovaCijena += p.NovaCijena * postotak; //mislim da ne racuna ovako
+                p.NovaCijena = p.Cijena + (postotak * p.Cijena / 100);
             } else
             {
-                p.NovaCijena -= p.NovaCijena * postotak;
+                //p.NovaCijena -= p.NovaCijena * postotak;
+                p.NovaCijena = p.Cijena - (postotak * p.Cijena / 100);
+
             }
         }
 
