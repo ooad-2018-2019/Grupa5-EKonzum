@@ -12,15 +12,19 @@ namespace EMarket.Models
         public String KorisnickoIme { get; set; }
         public String Lozinka { get; set; }
         public int Id { get; set; }
-        
+        public String SigurnosnoPitanje { get; set; }
+        public String Odgovor { get; set; }
+
         public Osoba () { }
-        public Osoba (String ime, String prezime, String korisnickoIme, String lozinka, int id)
+        public Osoba (String ime, String prezime, String korisnickoIme, String lozinka, int id, String pitanje, String odgovor)
         {
             Ime = ime;
             Prezime = prezime;
             KorisnickoIme = korisnickoIme;
             Lozinka = lozinka;
             Id = id;
+            SigurnosnoPitanje = pitanje;
+            Odgovor = odgovor;
         }
     }
 }

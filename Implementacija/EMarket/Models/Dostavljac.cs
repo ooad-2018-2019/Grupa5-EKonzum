@@ -19,7 +19,7 @@ namespace EMarket.Models
 
         public void OznaciNarudzbuKaoPlacenu(int id, Market market)
         {
-            foreach (Narudzba n in market.Narudzbe) // popraviti
+            foreach (Narudzba n in market.Narudzbe)
             {
                 if (n.Id.Equals(id))
                 {
