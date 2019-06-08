@@ -31,5 +31,11 @@ namespace EMarket.Models
             }
             return suma;
         }
+
+        public int obracunajBodove()
+        {
+            //broj bodova je int jer korisnik moze imati samo cijeli broj bodova
+            return (int)this.DajUkupnuCijenuNarudzbe() / 5;
+        }
     }
 }

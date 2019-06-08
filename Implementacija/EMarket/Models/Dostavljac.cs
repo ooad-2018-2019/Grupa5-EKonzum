@@ -24,6 +24,8 @@ namespace EMarket.Models
                 if (n.Id.Equals(id))
                 {
                     n.Isporuceno = true;
+                    //kada se oznaci narudzba kao placena treba dodati odgovarajuci broj bodova klijentu pozivajuci metodu za obracun bodova iz narudzbe
+                    n.Klijent.BrojBodova += n.obracunajBodove();
                     return;
                 }
             }

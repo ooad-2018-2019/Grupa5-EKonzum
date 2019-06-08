@@ -30,7 +30,9 @@ namespace EMarket.Models
 
         public void ObracunajPopust(Narudzba narudzba)
         {
-            
+            int brojBodovaKlijenta = narudzba.Klijent.BrojBodova;
+            double novaCijena = narudzba.DajUkupnuCijenuNarudzbe() - brojBodovaKlijenta * 0.5;
+            //ispisati negdje ovu novu cijenu
         }
 
         public void Plati(Narudzba narudzba)
