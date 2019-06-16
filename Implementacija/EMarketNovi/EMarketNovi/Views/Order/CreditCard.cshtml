@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Detalji o kreditnoj kartici";
+}
+
+<div class="row border border-primary" style="background-color: lightgray;width: 280;">
+    <div class="col">
+        <form>
+            <div style="background-color: gray;height: 40;">
+                <h3>Podaci o kartici</h3>
+                <hr />
+            </div>
+            <div class="form-group row" style="height: 40;">
+                <label class="col-sm-3 col-form-label">Odaberite karticu:   </label>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle dropdown-info" data-toggle="dropdown" aria-expanded="false" type="button"></button>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                </div>
+            </div>
+            <div class="form-group row" style="height: 40;"><label class="col-sm-3 col-form-label" for="inputCardNumber">Broj kartice:</label><input class="form-control col-sm-5" type="text" id="inputCardNumber" /></div>
+            <div class="form-group row" style="height: 40;"><label class="col-sm-3 col-form-label" for="inputDate">Datum isteka:</label><input class="form-control col-sm-5 col-form-label" id="inputDate" type="date" /></div>
+            <div class="form-group row" style="height: 40;"><label class="col-sm-3 col-form-label" for="inputCVV">CVV kod:</label><input class="form-control col-sm-5" type="text" id="inputCVV" /></div>
+            <div class="form-group" style="height: 40;"><button class="btn btn-primary btn-success" type="button">Potvrdi</button></div>
+        </form>
+    </div>
+</div>
+

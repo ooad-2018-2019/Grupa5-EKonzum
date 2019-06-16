@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Mubina\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Mubina\\.nuget\\packages",
+      "C:\\Users\\Nadja\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Nadja\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
