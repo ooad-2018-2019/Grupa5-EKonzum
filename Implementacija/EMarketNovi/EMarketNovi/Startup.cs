@@ -47,7 +47,12 @@ namespace EMarketNovi
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            
+            var conString = Configuration.GetConnectionString("DefaultConnection");
+            var optionsBuilder = new DbContextOptionsBuilder<OOADContext>();
+            optionsBuilder.UseSqlServer(conString);
+            OOADContext baza = new OOADContext(optionsBuilder.Options);
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,7 +80,7 @@ namespace EMarketNovi
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Login}/{id?}");
             });
         }
     }
