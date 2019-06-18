@@ -26,6 +26,18 @@ namespace EMarketNovi.Models
             Odgovor = odgovor;
             BrojBodova = brojBodova;
         }
+
+        public Klijent(String ime, String prezime, String korisnickoIme, String lozinka, String adresaIsporuke, String sigurnosnoPitanje, String odgovor)
+        {
+            Ime = ime;
+            Prezime = prezime;
+            KorisnickoIme = korisnickoIme;
+            Lozinka = lozinka;
+            AdresaIsporuke = adresaIsporuke;
+            SigurnosnoPitanje = sigurnosnoPitanje;
+            Odgovor = odgovor;
+            BrojBodova = 0;
+        }
     }
 }
 

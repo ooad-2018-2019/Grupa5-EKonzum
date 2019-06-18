@@ -6,15 +6,30 @@
 <div class="row border border-primary" style="background-color: lightgray;width: 300;">
     <div class="col">
         <form>
-            <div class="form-group" style="height: 30;"><input class="form-control col-sm-4" type="text" id="outputUsername" readonly="true" /></div>
-            <div class="form-group row" style="height: 40;">
-                <div class="col-sm-4 text-left">
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Odaberite kategoriju</button>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
-                    </div>
-                </div><a href="#">Pogledaj račun</a>
+            <div class="row">
+                <h4 class="col-sm-8" style="  background-color: gray;
+">
+                    Korisnicko Ime
+                </h4>
+
+                <h5 class="col-sm-2" style="  background-color: lightslategrey;
+">
+                    @Html.ActionLink("Pogledaj svoj racun", "CorrectAnswer", "User", null, new { })
+
+                </h5>
+                <h5 class="col-sm-2" style="  background-color: lightslategray;
+">
+                    @Html.ActionLink("Odjavi se", "Index", "Home", null, new { })
+
+                </h5>
+
+
             </div>
+            <div class="col-sm-4 text-left">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Odaberite kategoriju</button>
+                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+               
             <div class="form-group">
                 <ul class="list-group">
                     <li class="list-group-item"><span>Proizvod1</span></li>
@@ -23,7 +38,8 @@
                 </ul>
             </div>
             <div class="form-group row" style="height: 40;">
-                <div class="col-sm-2 text-left"><a href="#">Odustani</a></div><button class="btn btn-primary btn-success" type="button">Kreiraj narudžbu</button>
+                <div class="col-sm-2 text-left"><a href="#">Odustani</a></div>
+                @Html.ActionLink("Kreiraj narudzbu", "OrderDetails", "Order", null, new { @class = "btn btn-primary btn-danger", style = "position: relative;background-color: #3DD713;left: 1100px; color: #3DD713; border-top-left-radius: 5px; border-bottom-left-radius: 5px;", type = "submit" })
             </div>
         </form>
     </div>

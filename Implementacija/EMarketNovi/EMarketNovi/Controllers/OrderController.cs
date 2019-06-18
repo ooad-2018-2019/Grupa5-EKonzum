@@ -10,27 +10,27 @@ namespace EMarketNovi.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         public IActionResult OrderDetails()
         {
-            return View();
+            return View("OrderDetails");
         }
 
         public IActionResult NedovoljnoBodova()
         {
-            return View();
+            return View("NedovoljnoBodova");
         }
 
         public IActionResult Shopping()
         {
-            return View();
+            return View("Shopping");
         }
 
         public IActionResult CreditCard()
         {
-            return View();
+            return View("CreditCard");
         }
     }
 }

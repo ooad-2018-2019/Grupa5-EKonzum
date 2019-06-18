@@ -11,7 +11,9 @@
             <div class="form-group row" style="height: 40;"><label class="col-sm-3 col-form-label" for="outputSurname">Prezime:</label><input class="form-control col-sm-5" type="text" id="outputSurname" readonly="true" /></div>
             <div class="form-group row" style="height: 40;"><label class="col-sm-3 col-form-label" for="outputAdress">Adresa dostave:</label><input class="form-control col-sm-5" type="text" id="outputAdress" readonly="true" /></div>
             <div class="form-group row" style="height: 40;"><label class="col-sm-3 col-form-label" for="outputNumber">Broj bodova:</label><input class="form-control col-sm-5" type="text" id="outputNumber" readonly="true" /></div>
-            <div class="form-group text-center" style="height: 30;"><a href="#">Zaboravili ste šifru?</a></div>
+            @Html.ActionLink("Nazad na pocetnu", "Index", "Order", null, new { @class = "btn btn-primary btn-danger", style = "position: relative;background-color: #3DD713;left: 1100px; color: #3DD713; border-top-left-radius: 5px; border-bottom-left-radius: 5px;", type = "submit" })
+
+            @Html.ActionLink("Promijeni sifru", "Index", "User", null, new { })
         </form>
     </div>
 </div>

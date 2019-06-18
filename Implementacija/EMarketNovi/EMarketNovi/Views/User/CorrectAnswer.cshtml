@@ -6,9 +6,11 @@
 <div class="row border border-primary" style="background-color: lightgray;width: 280;">
     <div class="col">
         <form>
-            <div class="form-group col-md-12 text-center" style="height: 38;"><input class="form-control col-sm-11" type="text" id="outputMessage" readonly="true" /></div>
-            <div class="form-group col-md-12 text-center" style="height: 38;"><input class="form-control col-sm-8" type="text" id="inputNewPassword" /></div>
-            <div class="form-group col-md-12 text-center" style="height: 40;"><button class="btn btn-primary btn-success" type="button">Potvrdi</button></div>
+            <div class="form-group row" style="height: 38;">
+                <label class="col-sm-2 col-form-label" for="promjenalozinke">Odgovor je tacan! Molimo, unesite novu lozinku:</label>
+            </div>
+            <input class="form-control" type="text" name="etNova lozinka" placeholder="Nova lozinka">
+            @Html.ActionLink("Potvrdi", "CorrectAnswer", "User", null, new { @class = "btn btn-primary btn-danger", style = "position: relative;background-color: #FD0518;left: 1200px; color: #3DD713; border-top-left-radius: 5px; border-bottom-left-radius: 5px;", type = "submit" })
         </form>
     </div>
 </div>

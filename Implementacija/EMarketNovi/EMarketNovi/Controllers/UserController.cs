@@ -10,17 +10,17 @@ namespace EMarketNovi.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("ChangePassword");
         }
 
         public IActionResult ChangePassword()
         {
-            return View();
+            return View("CorrectAnswer");
         }
 
         public IActionResult CorrectAnswer()
         {
-            return View();
+            return View("Index");
         }
     }
 }

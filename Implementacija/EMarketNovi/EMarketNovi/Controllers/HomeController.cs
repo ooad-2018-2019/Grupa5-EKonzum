@@ -10,14 +10,11 @@ namespace EMarketNovi.Controllers
 {
     public class HomeController : Controller
     {
+        private static OOADContext database = OOADContext.getInstance();
+        public static Osoba trenutnoUlogovan = null;
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            return View("Login");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -26,12 +23,8 @@ namespace EMarketNovi.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public ViewResult Register()
-        {
-            return View();
-        }
 
-        public ViewResult Login()
+        public IActionResult Login()
         {
             return View();
         }

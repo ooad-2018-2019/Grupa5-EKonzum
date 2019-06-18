@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Registracija";
+}
+
+<div class="row border border-primary" style="background-color: lightgray;width: 320;">
+    <div class="col">
+        @using (Html.BeginForm("Registruj", "Registration"))
+        {
+        <form method="post">
+            <div style="background-color: gray;height: 40;">
+                <h3>Kreiranje računa</h3>
+                <hr />
+            </div>
+            <div class="illustration">
+                <input class="form-control" type="text" name="etFirstName" placeholder="Ime">
+                <input class="form-control" type="text" name="etLastName" placeholder="Prezime">
+
+                <input class="form-control" type="text" name="etUsername" placeholder="Korisnicko ime">
+                <input class="form-control" type="password" name="etPassword" placeholder="Lozinka">
+                <input class="form-control" type="password" name="etConfirmPassword" placeholder="Potvrdi lozinku">
+                <input class="form-control" type="text" name="etAddress" placeholder="Adresa isporuke">
+                <input class="form-control" type="text" name="etSigurnosnoPitanje" placeholder="Sigurnosno pitanje">
+                <input class="form-control" type="text" name="etOdgovor" placeholder="Odgovor">
+            </div>
+            @Html.ActionLink("Odustani", "Index", "Home", null, new { @class = "btn btn-primary btn-danger", style = "position: relative;background-color: #FD0518;left: 70px; color: #FD0518; border-top-left-radius: 5px; border-bottom-left-radius: 5px;", type = "submit" })
+            
+                @Html.ActionLink("Potvrdi", "Index", "Order", null, new { @class = "btn btn-primary btn-danger", style = "position: relative;background-color: #3DD713;left: 1100px; color: #3DD713; border-top-left-radius: 5px; border-bottom-left-radius: 5px;", type = "submit" })
+            
+        </form>
+        }
+        </div>
+</div>
+

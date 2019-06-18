@@ -23,6 +23,7 @@ namespace EMarketNovi.Models
 
         public DbSet<Proizvod> Proizvod { get; set; }
         public DbSet<Narudzba> Narudzba { get; set; }
+        public DbSet<Log> Log { get; set; }
         public DbSet<StavkaNarudzbe> StavkaNarudzbe { get; set; }
         public DbSet<Osoba> Osoba { get; set; }
         //public DbSet<Klijent> Klijent { get; set; }
@@ -36,6 +37,7 @@ namespace EMarketNovi.Models
             modelBuilder.Entity<PrehrambeniProizvod>().ToTable("PrehrambeniProizvod");
             modelBuilder.Entity<Narudzba>().ToTable("Narudzba");
             modelBuilder.Entity<StavkaNarudzbe>().ToTable("StavkaNarudzbe");
+            modelBuilder.Entity<Log>().ToTable("Log");
             modelBuilder.Entity<Osoba>().ToTable("Osoba");
             modelBuilder.Entity<Klijent>().ToTable("Klijent");
             modelBuilder.Entity<Menadzer>().ToTable("Menadzer");

@@ -6,21 +6,28 @@
 <div class="row border border-primary" style="  background-color: lightgray;
 ">
     <div class="col">
+        @using (Html.BeginForm("Login", "Home"))
+        {
         <form style="  background-color: lightgray;
 ">
             <div class="row">
-                <h4 class="col-sm-6" style="  background-color: gray;
+                <h4 class="col-sm-10" style="  background-color: gray;
 ">
                     e-Market
                 </h4>
-                <div class="col-sm-6 text-center"><a id="linkRegister" href="#">Kreiraj račun</a></div>
+
+                @Html.ActionLink("Kreiraj racun", "Index", "Registration", null, new { })
+
             </div>
             <hr />
-            <div class="form-group row"><label class="col-sm-3 col-form-label" for="inputUserName">Korisničko ime:</label><input class="form-control col-sm-8" type="text" id="inputUserName" /></div>
-            <div class="form-group row"><label class="col-sm-3 col-form-label" for="inputPassword">Lozinka:</label><input class="form-control col-sm-8" type="password" id="inputPassword" /></div>
-            <div class="form-group text-center"><a href="#">Zaboravili ste šifru?</a></div>
-            <div class="form-group text-right"><button class="btn btn-primary" type="button">Prijavi se</button></div>
+            <div class="illustration"></div>
+            <div class="form-group"><input class="form-control" type="text" name="etUsername" placeholder="Korisnicko ime"></div>
+            <div class="form-group"><input class="form-control" type="password" name="etPassword" placeholder="Lozinka"></div>
+            @Html.ActionLink("Prijavi se", "Index", "Order", null, new { @class = "btn btn-primary btn-danger", style = "position: relative;background-color: #3DD713;left: 1100px; color: #3DD713; border-top-left-radius: 5px; border-bottom-left-radius: 5px;", type = "submit" })
+            @Html.ActionLink("Zaboravili ste šifru?", "Index", "User", null, new { @class = "forgot" })
+
         </form>
+        }
     </div>
 </div>
 
